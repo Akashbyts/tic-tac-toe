@@ -54,12 +54,4 @@ Tic_Tac_Toe/
 🙌 Author
 🧑‍💻 Akash
 GitHub: https://github.com/Akashbyts
-
-sql
-Copy code
-
-After updating:
-```bash
-git add README.md
-git commit -m "Enhance README"
-git push
+⭐ If you like this project, give it a star!
