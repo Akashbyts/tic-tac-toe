@@ -23,6 +23,13 @@ const resetGame = ()=>{  //logic of reset game
     messageContainer.classList.add("hide");
     getWinner = false;
     moveCount = 0;
+    boxes.forEach((box, index) => {
+    setTimeout(() => {
+        box.style.backgroundColor = "#7fffd4";
+    }, index * 200); // 200ms gap between boxes
+});
+
+
 }
 
 resetButton.addEventListener("click",resetGame)  //reset
@@ -72,6 +79,9 @@ const checkWinner = ()=>{    // check for the winning patterns and give the winn
         if(pos1Val != "" && pos2Val != "" && pos3Val != ""){
             if(pos1Val === pos2Val && pos2Val === pos3Val){
                 console.log("Winner",pos1Val);
+                boxes[pattern[0]].style.backgroundColor = "#ffd166";
+                boxes[pattern[1]].style.backgroundColor = "#ffd166";
+                boxes[pattern[2]].style.backgroundColor = "#ffd166";
                 getWinner = true;
                 disableBoxes();
                 showWinner(pos1Val);
